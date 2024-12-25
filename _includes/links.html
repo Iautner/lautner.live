@@ -1,12 +1,18 @@
-<ul class="list-style-none f3 container-sm">
-    {% for item in site.data.links %}
-    <li class="mb-3 text-center text-semibold">
-        <a href="{{ item.url }}" class="Link--primary d-block p-3 border rounded-3 color-shadow-small color-bg-subtle">
-            <svg class="bi mr-1" width="16" height="16" fill="currentColor">
-                <use xlink:href="{{ site.baseurl }}/assets/img/bootstrap-icons.svg#{{ item.icon | default: 'globe2' }}"/>
-            </svg><br>
-            {{ item.text }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+<header class="text-center">
+    <h1 class="d-inline-block mt-3">
+        <span class="d-flex">
+            <span class="pr-3">
+                <img class="avatar text-center mb-3" 
+                        alt="{{ page.avatar-alt-text }}"
+                        src="{{ page.avatar-url }}" 
+                        width="48" 
+                        height="48"
+                        loading="lazy">
+            </span>
+            <span class="">{{ page.avatar-name }}</span>
+        </span>
+    </h1>
+    <div class="f3-mktg color-fg-muted mb-5">{{ page.content | markdownify }}</div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UC_Ba9y5pTsyAiyoHLZzVTGA" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://player.twitch.tv/?channel=lautnergames&parent=www.lautner.co" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+</header>
